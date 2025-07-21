@@ -1,87 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Clipboard landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/styles/styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Clipboard landing page</title>
 
-  A history of everything you copy
-
-  Clipboard allows you to track and organize everything you 
-  copy. Instantly access your clipboard on all your devices.
-
-  Download for iOS
-  Download for Mac
-
-  Keep track of your snippets
-
-  Clipboard instantly stores any item you copy in the cloud, 
-  meaning you can access your snippets immediately on all your 
-  devices. Our Mac and iOS apps will help you organize everything.
-
-  Quick Search
-
-  Easily search your snippets by content, category, web address, application, and more.
-
-  iCloud Sync
-
-  Instantly saves and syncs snippets across all your devices.
-
-  Complete History
-
-  Retrieve any snippets from the first moment you started using the app.
-
-  Access Clipboard anywhere
-
-  Whether you’re on the go, or at your computer, you can access all your Clipboard 
-  snippets in a few simple clicks.
-
-  Supercharge your workflow
-
-  We’ve got the tools to boost your productivity.
-
-  Create blacklists
-
-  Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
-
-  Plain text snippets
-
-  Remove unwanted formatting from copied text for a consistent look.
-
-  Sneak preview
-
-  Quick preview of all snippets on your Clipboard for easy access.
-
-  Clipboard for iOS and Mac OS
-
-  Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
-  and you’re ready to start adding to your clipboard.
-
-  Download for iOS
-  Download for Mac
-
-  FAQs
-  Contact Us
-  Privacy Policy
-  Press Kit
-  Install Guide
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 1.1rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <figure><img src="./images/logo.svg" alt="Clipboard logo" /></figure>
+    </header>
+    <main>
+      <section id="intro" class="download-hero">
+        <div class="download-hero__content-wrapper">
+          <h1 class="download-hero__heading">A history of everything you copy</h1>
+          <p class="download-hero__lede">
+            Clipboard allows you to track and organize everything you copy. Instantly access your clipboard on all your devices.
+          </p>
+        </div>
+        <div class="download-hero__cta-wrapper">
+          <button class="btn btn--ios">Download for iOS</button
+          ><button class="btn btn--mac">Download for Mac</button>
+        </div>
+      </section>
+      <section id="bottom-cta" class="download-hero">
+        <div class="download-hero__content-wrapper">
+          <h2 class="download-hero__heading">Clipboard for iOS and Mac OS</h2>
+          <p class="download-hero__lede">
+            Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you’re ready to start adding to your clipboard.
+          </p>
+        </div>
+        <div class="download-hero__cta-wrapper">
+          <button class="btn btn--ios">Download for iOS</button
+          ><button class="btn btn--mac">Download for Mac</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="main-footer">
+        <div class="footer_logo">
+          <figure><img src="./images/logo.svg" alt="Clipboard logo" /></figure>
+        </div>
+        <ul class="footer_links">
+          <li class="footer_link"><a href="#">FAQs</a></li>
+          <li class="footer_link"><a href="#">Privacy Policy</a></li>
+          <li class="footer_link"><a href="#">Install Guide</a></li>
+          <li class="footer_link"><a href="#">Contact Us</a></li>
+          <li class="footer_link"><a href="#">Press Kit</a></li>
+        </ul>
+        <ul class="footer_socials">
+          <li class="footer_social-icon">
+            <a href="#" target="_blank"
+              ><img src="./images/icon-facebook.svg" alt="Facebook icon"
+            /></a>
+          </li>
+          <li class="footer_social-icon">
+            <a href="#" target="_blank"
+              ><img src="./images/icon-twitter.svg" alt="Twitter Icon"
+            /></a>
+          </li>
+          <li class="footer_social-icon">
+            <a href="#" target="_blank"
+              ><img src="./images/icon-instagram.svg" alt="Instagram Icon"
+            /></a>
+          </li>
+        </ul>
+      </section>
+      <section class="attribution-footer">
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/janikjczcz" target="_blank"
+            >Jaroslav Janik</a
+          >.
+        </p>
+      </section>
+    </footer>
+  </body>
 </html>

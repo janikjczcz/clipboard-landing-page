@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+/*colors*/
+$white: #fff;
+$black: #000;
+$gray-950: #2a2a2a;
+$gray-700: #4C545C;
+$gray-500: #9EABB2;
+$gray-50: #F5F7F7;
+$green-500: #26BBA4;
+$green-300: #5DCCBB;
+$blue-500: #6174FF;
+$blue-400: #8897FF;
+$gradient-1: linear-gradient(90deg,rgba(79, 79, 79, 1) 0%, rgba(0, 0, 0, 1) 100%);
+$gradient-2: linear-gradient(90deg,rgba(109, 109, 109, 1) 0%, rgba(0, 0, 0, 1) 100%);
+
+/*fonts*/
+$font-family: "Bai Jamjuree", sans-serif;
+$text-preset-1: 600 4.6rem / 125% $font-family; 
+$text-preset-2: 600 4rem / 125% $font-family; 
+$text-preset-3: 600 3.6rem / 125% $font-family;
+$text-preset-4: 600 3.2rem / 125% $font-family;
+$text-preset-5: 600 2.8rem / 125% $font-family;
+$text-preset-6: 600 2.4rem / 125% $font-family;
+$text-preset-7-semibold: 600 2rem / 150% $font-family;
+$text-preset-7-regular: 400 2rem / 150% $font-family;
+$text-preset-8: 400 1.6rem / 150% $font-family;
+
+/*letter-spacing*/
+$ls-1-2: - .075rem;
+$ls-3: - .06rem;
+$ls-4-5: - .05rem;
+$ls-6: - .04rem;
+$ls-7semibold: .05rem;
+$ls-7regular-8: .015rem;
+
+/*spacing*/
+$space-0: 0;
+$space-100: .8rem;
+$space-200: $space-100 * 2;
+$space-300: $space-100 * 3;
+$space-400: $space-100 * 4;
+$space-500: $space-100 * 5;
+$space-600: $space-100 * 6;
+$space-700: $space-100 * 7;
+$space-800: $space-100 * 8;
+$space-900: $space-100 * 9;
+$space-1000: $space-100 * 10;
+$space-1100: $space-100 * 11;
+$space-1200: $space-100 * 12;
+
+/*utils*/
+$content-width: 110rem;
+
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+.sr-only {
+    position: absolute;
+    width:.1rem;
+    height:.1rem;
+    padding:0;
+    margin:-.1rem;
+    overflow:hidden;
+    clip: rect(0,0,0,0);
+    border:0;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+
+img {
+    max-width:100%;
+    display:block;
+}
