@@ -1,23 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
-
 /*colors*/
 $white: #fff;
 $black: #000;
 $gray-950: #2a2a2a;
-$gray-700: #4C545C;
-$gray-500: #9EABB2;
-$gray-50: #F5F7F7;
-$green-500: #26BBA4;
-$green-300: #5DCCBB;
-$blue-500: #6174FF;
-$blue-400: #8897FF;
-$gradient-1: linear-gradient(90deg,rgba(79, 79, 79, 1) 0%, rgba(0, 0, 0, 1) 100%);
-$gradient-2: linear-gradient(90deg,rgba(109, 109, 109, 1) 0%, rgba(0, 0, 0, 1) 100%);
+$gray-700: #4c545c;
+$gray-500: #9eabb2;
+$gray-50: #f5f7f7;
+$green-500: #26bba4;
+$green-300: #5dccbb;
+$blue-500: #6174ff;
+$blue-400: #8897ff;
+$gradient-1: linear-gradient(
+  90deg,
+  rgba(79, 79, 79, 1) 0%,
+  rgba(0, 0, 0, 1) 100%
+);
+$gradient-2: linear-gradient(
+  90deg,
+  rgba(109, 109, 109, 1) 0%,
+  rgba(0, 0, 0, 1) 100%
+);
 
 /*fonts*/
 $font-family: "Bai Jamjuree", sans-serif;
-$text-preset-1: 600 4.6rem / 125% $font-family; 
-$text-preset-2: 600 4rem / 125% $font-family; 
+$text-preset-1: 600 4.6rem / 125% $font-family;
+$text-preset-2: 600 4rem / 125% $font-family;
 $text-preset-3: 600 3.6rem / 125% $font-family;
 $text-preset-4: 600 3.2rem / 125% $font-family;
 $text-preset-5: 600 2.8rem / 125% $font-family;
@@ -27,16 +33,16 @@ $text-preset-7-regular: 400 2rem / 150% $font-family;
 $text-preset-8: 400 1.6rem / 150% $font-family;
 
 /*letter-spacing*/
-$ls-1-2: - .075rem;
-$ls-3: - .06rem;
-$ls-4-5: - .05rem;
-$ls-6: - .04rem;
-$ls-7semibold: .05rem;
-$ls-7regular-8: .015rem;
+$ls-1-2: -0.075rem;
+$ls-3: -0.06rem;
+$ls-4-5: -0.05rem;
+$ls-6: -0.04rem;
+$ls-7semibold: 0.05rem;
+$ls-7regular-8: 0.015rem;
 
 /*spacing*/
 $space-0: 0;
-$space-100: .8rem;
+$space-100: 0.8rem;
 $space-200: $space-100 * 2;
 $space-300: $space-100 * 3;
 $space-400: $space-100 * 4;
@@ -51,113 +57,459 @@ $space-1200: $space-100 * 12;
 
 /*utils*/
 $content-width: 110rem;
+$tablet: 48em;
+$desktop: 75em;
+$desktop-xl: 100em;
 
 @mixin flex-col-center($gap: $space-100) {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    gap: $gap;
-    text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: $gap;
+  text-align: center;
 }
 
 @mixin flex-row-center($gap: $space-100) {
-    display: flex;
-    flex-flow: row wrap;
-    gap: $gap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: $gap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin bg-properties {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 @mixin btn {
-    font: $text-preset-7-semibold;
-    color: $white;
-    background-color: $green-500;
-    padding-block: $space-100;
-    padding-inline: $space-200;
-    border: none;
-    border-radius: 5rem;
-    box-shadow: inset 0 -0.3rem 0 0 rgba(0, 0, 0, .15);
-    width: 100%;
-    cursor: pointer;
+  font: $text-preset-7-semibold;
+  letter-spacing: $ls-7semibold;
+  color: $white;
+  background-color: $green-500;
+  padding-block: $space-100 * 1.5;
+  padding-inline: $space-200;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: inset 0 -0.3rem 0 0 rgba(0, 0, 0, 0.15);
+  width: 100%;
+  cursor: pointer;
 
-    &:hover, &:focus-visible {
-        background-color: $green-300;
-    }
+  &:hover,
+  &:focus-visible {
+    background-color: $green-300;
+  }
+
+  @media (min-width: $tablet) {
+    max-width: fit-content;
+    padding-block: $space-100 * 1.5;
+    padding-inline: $space-300;
+  }
 }
 
 @mixin btn--mac {
-    background-color: $blue-500;
-    
-    &:hover, &:focus-visible {
-        background-color: $blue-400;
+  background-color: $blue-500;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $blue-400;
+  }
+}
+
+@mixin heading-lede {
+  &__heading {
+    font: $text-preset-5;
+    letter-spacing: $ls-4-5;
+    color: $gray-700;
+
+    @media (min-width: $tablet) {
+      font: $text-preset-3;
+      letter-spacing: $ls-3;
     }
+  }
+
+  &__lede {
+    font: $text-preset-8;
+    letter-spacing: $ls-7regular-8;
+    color: $gray-500;
+
+    @media (min-width: $tablet) {
+      font: $text-preset-7-regular;
+      letter-spacing: $ls-7regular-8;
+    }
+  }
 }
 
-*, *::before, *::after {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 .sr-only {
-    position: absolute;
-    width:.1rem;
-    height:.1rem;
-    padding:0;
-    margin:-.1rem;
-    overflow:hidden;
-    clip: rect(0,0,0,0);
-    border:0;
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
-
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
-
 
 img {
-    max-width:100%;
-    display:block;
+  max-width: 100%;
+  display: block;
 }
 
-
-li {list-style-type: none;}
+li {
+  list-style-type: none;
+}
 
 body {
-    padding-block-start: $space-1200;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
-header, main, footer {
-    padding-inline: $space-300;
+main {
+  @include flex-col-center($gap: $space-1200);
 }
 
+header,
+main,
+footer {
+  padding-inline: $space-400;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    padding-inline: $space-1000;
+  }
+}
+
+/*header*/
 
 header {
-    @include flex-col-center($gap: $space-800);
+  @include flex-col-center($gap: $space-800);
+  padding-block: $space-1200;
+  background: url(../images/bg-header-mobile.png);
+  @include bg-properties();
+
+  @media (min-width: 43em) {
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  @media (min-width: $desktop) {
+    background: url(../images/bg-header-desktop.png);
+    background-size: cover;
+    background-position: bottom;
+  }
 }
 
 .download-hero {
-    @include flex-col-center($gap: $space-700);
+  @include flex-col-center($gap: $space-700);
 
-    &__content-wrapper {
-        @include flex-col-center($gap: $space-200);
+  &__content-wrapper {
+    @include flex-col-center($gap: $space-200);
+
+    @media (min-width: $desktop) {
+      max-width: 73rem;
     }
+  }
 
-    &__cta-wrapper {
-        @include flex-row-center($gap: $space-300);
+  @include heading-lede();
 
+  &__cta-wrapper {
+    @include flex-row-center($gap: $space-300);
+
+    @media (min-width: $tablet) {
+      @include flex-row-center($gap: $space-200);
+      flex-wrap: nowrap;
     }
+  }
 
-    .btn {
-        @include btn();
-    }
+  .btn {
+    @include btn();
+  }
 
-    .btn--mac {
-        @include btn--mac();
-    }
+  .btn--mac {
+    @include btn--mac();
+  }
 }
 
+#intro .download-hero__heading {
+  font: $text-preset-4;
 
+  @media (min-width: $tablet) {
+    font: $text-preset-2;
+    letter-spacing: $ls-1-2;
+  }
+
+  @media (min-width: $desktop) {
+    font: $text-preset-1;
+  }
+}
+
+/* keep track */
+.keep-track {
+  @include flex-col-center($gap: $space-900);
+  padding-block-start: $space-600;
+
+  @media (min-width: $tablet) {
+    gap: $space-1200;
+  }
+
+  &__content-wrapper {
+    @include flex-col-center($gap: $space-200);
+    @media (min-width: $desktop) {
+      max-width: 73rem;
+    }
+  }
+
+  @include heading-lede();
+
+  &__feature {
+    @include flex-col-center($gap: $space-900);
+    @media (min-width: $tablet) {
+      gap: $space-1200;
+    }
+    @media (min-width: $desktop) {
+      @include flex-row-center($gap: $space-800);
+      margin-inline-start: -$space-1200 * 3;
+    }
+  }
+
+  &__benefits {
+    @include flex-col-center($gap: $space-700);
+    max-width: 35rem;
+  }
+
+  &__single-benefit {
+    @include flex-col-center($gap: $space-100);
+    @media (min-width: $desktop) {
+      align-items: start;
+      text-align: start;
+    }
+  }
+
+  &__single-benefit-heading {
+    font: $text-preset-6;
+    letter-spacing: $ls-6;
+    color: $gray-700;
+  }
+
+  &__single-benefit-lede {
+    font: $text-preset-8;
+    letter-spacing: $ls-7regular-8;
+    color: $gray-500;
+  }
+}
+
+/* access */
+
+.access {
+  @include flex-col-center($gap: $space-900);
+  padding-block-start: $space-600;
+
+  &__content-wrapper {
+    @include flex-col-center($gap: $space-200);
+    @media (min-width: $desktop) {
+      max-width: 73rem;
+    }
+  }
+  @include heading-lede();
+}
+
+/* workflow */
+
+.workflow {
+  @include flex-col-center($gap: $space-1100);
+  padding-block-start: $space-600;
+  @include heading-lede();
+
+  @media (min-width: $desktop) {
+    gap: $space-900;
+  }
+
+  &__benefits {
+    @include flex-col-center($gap: $space-800);
+    max-width: 35rem;
+
+    @media (min-width: $desktop) {
+      @include flex-row-center($gap: $space-400);
+      flex-wrap: nowrap;
+      align-items: baseline;
+      max-width: 100%;
+    }
+
+    &-single {
+      @include flex-col-center($gap: $space-500);
+      @media (min-width: $desktop) {
+        max-width: 35rem;
+        width: 100%;
+      }
+    }
+  }
+
+  &__content-wrapper {
+    @include flex-col-center($gap: $space-200);
+    @media (min-width: $desktop) {
+      max-width: 73rem;
+    }
+  }
+
+  &__benefit-content-wrapper {
+    @include flex-col-center($gap: $space-200);
+  }
+
+  &__benefit-heading {
+    font: $text-preset-6;
+    letter-spacing: $ls-6;
+    color: $gray-700;
+  }
+  &__benefit-lede {
+    font: $text-preset-8;
+    letter-spacing: $ls-7regular-8;
+    color: $gray-500;
+  }
+}
+
+/* featured in */
+.featured-in {
+  @include flex-col-center($gap: $space-700);
+  padding-block-start: $space-600;
+  width: 100%;
+
+  &__item {
+    max-width: 15rem;
+    width: 100%;
+  }
+
+  &__logo img {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet) {
+    @include flex-row-center($gap: $space-700);
+    padding-block: $space-1000;
+  }
+
+  @media (min-width: $desktop) {
+    @include flex-row-center($gap: $space-1200);
+  }
+}
+
+#bottom-cta {
+  padding-block: $space-600 $space-1000;
+  @media (min-width: $desktop) {
+    padding-block: $space-600 $space-1200 * 2;
+  }
+}
+
+footer {
+  @include flex-col-center($gap: $space-400);
+  padding-block: $space-600;
+  background-color: $gray-50;
+}
+
+.footer-main {
+  @include flex-col-center($gap: $space-400);
+
+  @media (min-width: $desktop) {
+    @include flex-row-center($gap: $space-600);
+    width: $content-width;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    max-width: 5.5rem;
+    width: 100%;
+  }
+
+  &__links.default {
+    @include flex-col-center($gap: $space-300);
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  
+
+  &__single-link a {
+    font: $text-preset-7-regular;
+    color: $gray-700;
+    letter-spacing: $ls-7regular-8;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__social {
+    @include flex-row-center($gap: $space-500);
+    @media (min-width: $desktop) {
+      gap: $space-300;
+    }
+  }
+}
+
+.desktop {
+    display: none;
+    @media (min-width: $desktop) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: start;
+      align-items: baseline;
+      gap: $space-400;
+      margin-inline-start: -$space-1000 * 2;
+      .footer-main__links {
+        @include flex-col-center($gap: $space-800);
+        row-gap: $space-200;
+        justify-content: start;
+        align-items: start;
+        max-width: 48rem;
+      }
+    }
+  }
+
+@media (min-width: $desktop) {
+  .first {
+    order: -1;
+  }
+  .second {
+    order: 0;
+  }
+  .third {
+    order: 1;
+  }
+  .fourth {
+    order: 2;
+  }
+  .fifth {
+    order: 3;
+  }
+}
+
+.attribution {
+  background-color: $white;
+  padding-block: $space-300;
+  width: 100%;
+  & p {
+    font: $text-preset-8;
+    color: $gray-700;
+    letter-spacing: $ls-7regular-8;
+    text-align: center;
+  }
+
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+}

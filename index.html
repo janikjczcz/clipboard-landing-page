@@ -11,144 +11,230 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/styles/styles.css" />
 
     <title>Frontend Mentor | Clipboard landing page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution p {
-        font-size: 1.1rem;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <header>
-      <figure class="logo"><img src="./images/logo.svg" alt="Clipboard logo" /></figure>
+      <figure class="logo">
+        <img src="./images/logo.svg" alt="Clipboard logo" />
+      </figure>
       <section id="intro" class="download-hero">
         <div class="download-hero__content-wrapper">
-          <h1 class="download-hero__heading heading--intro">A history of everything you copy</h1>
+          <h1 class="download-hero__heading heading--intro">
+            A history of everything you copy
+          </h1>
           <p class="download-hero__lede">
-            Clipboard allows you to track and organize everything you copy. Instantly access your clipboard on all your devices.
+            Clipboard allows you to track and organize everything you copy.
+            Instantly access your clipboard on all your devices.
           </p>
         </div>
         <div class="download-hero__cta-wrapper">
-          <button class="btn btn--ios">Download for iOS</button
+          <button class="btn">Download for iOS</button
           ><button class="btn btn--mac">Download for Mac</button>
         </div>
       </section>
     </header>
     <main>
       <section id="keep-track" class="keep-track">
-        <div class="section-intro__content-wrapper keep-track__content-wrapper">
-          <h2 class="section-intro__heading">Keep track of your snippets</h2>
-          <p class="section-intro__lede">Clipboard instantly stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. Our Mac and iOS apps will help you organize everything.</p>
+        <div class="keep-track__content-wrapper">
+          <h2 class="keep-track__heading">Keep track of your snippets</h2>
+          <p class="keep-track__lede">
+            Clipboard instantly stores any item you copy in the cloud, meaning
+            you can access your snippets immediately on all your devices. Our
+            Mac and iOS apps will help you organize everything.
+          </p>
         </div>
-        <div class="keep-track__benefits">
-          <figure class="keep-track__benefits-media-wrapper"><img src="./images/image-computer.png" alt="A computer monitor displaying central white box containing a green checkmark, indicating success or completion."></figure>
-          <div class="keep-track__benefits-content-wrapper">
-            <div class="keep-track__single-benefit">
+        <div class="keep-track__feature">
+          <figure class="keep-track__media-wrapper breakout">
+            <img
+              src="./images/image-computer.png"
+              alt="A computer monitor displaying central white box containing a green checkmark, indicating success or completion."
+            />
+          </figure>
+          <div class="keep-track__benefits">
+            <article class="keep-track__single-benefit">
               <h3 class="keep-track__single-benefit-heading">Quick Search</h3>
-              <p class="keep-track__single-benefit-lede">Easily search your snippets by content, category, web address, application, and more.</p>
-            </div>
-            <div class="keep-track__single-benefit">
+              <p class="keep-track__single-benefit-lede">
+                Easily search your snippets by content, category, web address,
+                application, and more.
+              </p>
+            </article>
+            <article class="keep-track__single-benefit">
               <h3 class="keep-track__single-benefit-heading">iCloud Sync</h3>
-              <p class="keep-track__single-benefit-lede">Instantly saves and syncs snippets across all your devices.</p>
-            </div>
-            <div class="keep-track__single-benefit">
-              <h3 class="keep-track__single-benefit-heading">Complete History</h3>
-              <p class="keep-track__single-benefit-lede">Retrieve any snippets from the first moment you started using the app.</p>
-            </div>
+              <p class="keep-track__single-benefit-lede">
+                Instantly saves and syncs snippets across all your devices.
+              </p>
+            </article>
+            <article class="keep-track__single-benefit">
+              <h3 class="keep-track__single-benefit-heading">
+                Complete History
+              </h3>
+              <p class="keep-track__single-benefit-lede">
+                Retrieve any snippets from the first moment you started using
+                the app.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
       <section id="access" class="access">
-        <div class="section-intro__content-wrapper access__content-wrapper">
-          <h2 class="section-intro__heading">Access Clipboard anywhere</h2>
-          <p class="section-intro__lede">Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks.</p>
+        <div class="access__content-wrapper">
+          <h2 class="access__heading">Access Clipboard anywhere</h2>
+          <p class="access__lede">
+            Whether you’re on the go, or at your computer, you can access all
+            your Clipboard snippets in a few simple clicks.
+          </p>
         </div>
-        <div class="access__feature">
-          <figure class="access__feature-media-wrapper"><img src="./images/image-devices.png" alt="A tablet and smartphone displaying central white box containing a green checkmark, indicating success or completion."></figure>
-          </div>
+        <figure class="access__media-wrapper">
+          <img
+            src="./images/image-devices.png"
+            alt="A tablet and smartphone displaying central white box containing a green checkmark, indicating success or completion."
+          />
+        </figure>
       </section>
 
       <section id="workflow" class="workflow">
-        <div class="section-intro__content-wrapper workflow__content-wrapper">
-          <h2 class="section-intro__heading">Supercharge your workflow</h2>
-          <p class="section-intro__lede">We’ve got the tools to boost your productivity.</p>
+        <div class="workflow__content-wrapper">
+          <h2 class="workflow__heading">Supercharge your workflow</h2>
+          <p class="workflow__lede">
+            We’ve got the tools to boost your productivity.
+          </p>
         </div>
-        <div class="workflow__feature">
-          <figure class="workflow__feature-media-wrapper"><img src="./images/image-devices.png" alt="A tablet and smartphone displaying central white box containing a green checkmark, indicating success or completion."></figure>
-          <div class="workflow__benefits-single">
-            <figure class="workflow__benefit-media"><img src="./images/icon-blacklist.svg" alt=""></figure>
-            <h3 class="workflow__benefit-heading">Create blacklists</h3>
-            <p class="workflow__benefit-lede">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
-          </div>
-          <div class="workflow__benefits-single">
-            <figure class="workflow__benefit-media"><img src="./images/icon-text.svg" alt=""></figure>
-            <h3 class="workflow__benefit-heading">Plain text snippets</h3>
-            <p class="workflow__benefit-lede">Remove unwanted formatting from copied text for a consistent look.</p>
-          </div>
-          <div class="workflow__benefits-single">
-            <figure class="workflow__benefit-media"><img src="./images/icon-preview.svg" alt=""></figure>
-            <h3 class="workflow__benefit-heading">Sneak preview</h3>
-            <p class="workflow__benefit-lede">Quick preview of all snippets on your Clipboard for easy access.</p>
-          </div>
-          </div>
+        <div class="workflow__benefits">
+          <article class="workflow__benefits-single">
+            <figure class="workflow__benefit-media">
+              <img src="./images/icon-blacklist.svg" alt="Icon showing sheet of paper" />
+            </figure>
+            <div class="workflow__benefit-content-wrapper">
+              <h3 class="workflow__benefit-heading">Create blacklists</h3>
+              <p class="workflow__benefit-lede">
+                Ensure sensitive information never makes its way to your
+                clipboard by excluding certain sources.
+              </p>
+            </div>
+          </article>
+          <article class="workflow__benefits-single">
+            <figure class="workflow__benefit-media">
+              <img src="./images/icon-text.svg" alt="Icon showing letter A with cursor next to it" />
+            </figure>
+            <div class="workflow__benefit-content-wrapper">
+              <h3 class="workflow__benefit-heading">Plain text snippets</h3>
+              <p class="workflow__benefit-lede">
+                Remove unwanted formatting from copied text for a consistent
+                look.
+              </p>
+            </div>
+          </article>
+          <article class="workflow__benefits-single">
+            <figure class="workflow__benefit-media">
+              <img src="./images/icon-preview.svg" alt="Icon showing open eye" />
+            </figure>
+            <div class="workflow__benefit-content-wrapper">
+              <h3 class="workflow__benefit-heading">Sneak preview</h3>
+              <p class="workflow__benefit-lede">
+                Quick preview of all snippets on your Clipboard for easy access.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section id="featured-in" class="featured-in">
-        <ul class="featured-in__list">
-          <li class="featured-in__item">
-            <figure class="featured-in__logo"><img src="./images/logo-google.png" alt="Google logo"></figure>
-          </li>
-          <li class="featured-in__item">
-            <figure class="featured-in__logo"><img src="./images/logo-ibm.png" alt="IBM logo"></figure>
-          </li>
-          <li class="featured-in__item">
-            <figure class="featured-in__logo"><img src="./images/logo-microsoft.png" alt="Microsoft logo"></figure>
-          </li>
-          <li class="featured-in__item">
-            <figure class="featured-in__logo"><img src="./images/logo-hp.png" alt="Hewlett Packard Enterprise logo"></figure>
-          </li>
-          <li class="featured-in__item">
-            <figure class="featured-in__logo"><img src="./images/logo-vector-graphics.png" alt="Vector Graphics logo"></figure>
-          </li>
-        </ul>
-      </section>
-      
+      <ul id="featured-in" class="featured-in">
+        <li class="featured-in__item">
+          <figure class="featured-in__logo">
+            <img src="./images/logo-google.png" alt="Google logo" />
+          </figure>
+        </li>
+        <li class="featured-in__item">
+          <figure class="featured-in__logo">
+            <img src="./images/logo-ibm.png" alt="IBM logo" />
+          </figure>
+        </li>
+        <li class="featured-in__item">
+          <figure class="featured-in__logo">
+            <img src="./images/logo-microsoft.png" alt="Microsoft logo" />
+          </figure>
+        </li>
+        <li class="featured-in__item">
+          <figure class="featured-in__logo">
+            <img
+              src="./images/logo-hp.png"
+              alt="Hewlett Packard Enterprise logo"
+            />
+          </figure>
+        </li>
+        <li class="featured-in__item">
+          <figure class="featured-in__logo">
+            <img
+              src="./images/logo-vector-graphics.png"
+              alt="Vector Graphics logo"
+            />
+          </figure>
+        </li>
+      </ul>
+
       <section id="bottom-cta" class="download-hero">
         <div class="download-hero__content-wrapper">
           <h2 class="download-hero__heading">Clipboard for iOS and Mac OS</h2>
           <p class="download-hero__lede">
-            Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you’re ready to start adding to your clipboard.
+            Available for free on the App Store. Download for Mac or iOS, sync
+            with iCloud and you’re ready to start adding to your clipboard.
           </p>
         </div>
         <div class="download-hero__cta-wrapper">
-          <button class="btn btn--ios">Download for iOS</button
+          <button class="btn">Download for iOS</button
           ><button class="btn btn--mac">Download for Mac</button>
         </div>
       </section>
     </main>
     <footer>
       <section class="footer-main">
-        <div class="footer-main_logo">
+        <div class="footer-main__logo">
           <figure><img src="./images/logo.svg" alt="Clipboard logo" /></figure>
         </div>
-        <ul class="footer-main_links">
-          <li class="footer-main_single-link"><a href="#">FAQs</a></li>
-          <li class="footer-main_single-link"><a href="#">Privacy Policy</a></li>
-          <li class="footer-main_single-link"><a href="#">Install Guide</a></li>
-          <li class="footer-main_single-link"><a href="#">Contact Us</a></li>
-          <li class="footer-main_single-link"><a href="#">Press Kit</a></li>
+        <ul class="footer-main__links default">
+          <li class="footer-main__single-link"><a href="#">FAQs</a></li>
+          <li class="footer-main__single-link"><a href="#">Contact Us</a></li>
+          <li class="footer-main__single-link">
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li class="footer-main__single-link"><a href="#">Press Kit</a></li>
+          <li class="footer-main__single-link">
+            <a href="#">Install Guide</a>
+          </li>
         </ul>
-        <ul class="footer-social">
-          <li class="footer-social_icon">
+        <div class="desktop">
+          <ul class="footer-main__links">
+            <li class="footer-main__single-link first"><a href="#">FAQs</a></li>
+            <li class="footer-main__single-link fourth">
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="footer-main__links">
+            <li class="footer-main__single-link second">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="footer-main__single-link fifth">
+              <a href="#">Press Kit</a>
+            </li>
+          </ul>
+          <ul class="footer-main__links">
+            <li class="footer-main__single-link third">
+              <a href="#">Install Guide</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-main__social">
+          <li class="footer-main__social_icon">
             <a href="#" target="_blank"
               ><img src="./images/icon-facebook.svg" alt="Facebook icon"
             /></a>
@@ -165,17 +251,17 @@
           </li>
         </ul>
       </section>
-      <section class="footer-attribution">
-        <p>
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by
-          <a href="https://github.com/janikjczcz" target="_blank"
-            >Jaroslav Janik</a
-          >.
-        </p>
-      </section>
     </footer>
+    <section class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/janikjczcz" target="_blank"
+          >Jaroslav Janik</a
+        >.
+      </p>
+    </section>
   </body>
 </html>
